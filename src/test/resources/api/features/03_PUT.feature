@@ -57,7 +57,7 @@ Feature: PUT
     And the response should be contain:
       | firstName | redsky           |
       | lastName  | raven            |
-      | email     | hata@mail.com |
+      | email     | holi@mail.com |
 
   @put-negative
   # BUG: status code always 200-OK when the required field is empty
