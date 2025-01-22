@@ -8,9 +8,9 @@ Feature: POST
   # required fields is only first name, last name and email (Must New User)
   Scenario: POST: create new user with required body fields only
     And user prepare "required fields" body for "POST" method with:
-      | firstName | Kakas         |
-      | lastName  | hatak          |
-      | email     | hata@mail.com |
+      | firstName | holi         |
+      | lastName  | nami          |
+      | email     | holi@mail.com |
     When user send a "POST" request to the "create" endpoint
     Then status code should be 200
     And the response should be match with "post_required_fields.json"
@@ -21,11 +21,11 @@ Feature: POST
   Scenario: POST: create new user with full body fields
     And user prepare "full fields" body for "POST" method with:
       | title       | mr                                                |
-      | firstName   | kushin                                               |
-      | lastName    | uzumak                                             |
+      | firstName   | shukaku                                               |
+      | lastName    | jincuriki                                             |
       | picture     | https://randomuser.me/api/portraits/med/men/1.jpg |
       | gender      | male                                              |
-      | email       | kurin@gmail.com                                  |
+      | email       | jincuriki@gmail.com                                  |
       | dateOfBirth | 1945-11-17T06:31:57.367Z                          |
       | phone       | 008-123-456-789                                   |
       | country     | Indonesia                                         |
